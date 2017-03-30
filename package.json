@@ -1,0 +1,52 @@
+{
+  "name": "ptz-core-app",
+  "version": "1.0.0",
+  "description": "this is a Polutz module.",
+  "main": "dist/index.js",
+  "typings": "src/index.ts",
+  "scripts": {
+    "postinstall": "typings install",
+    "lint": "tslint ./src/**/*.ts ./src/**/*.test.ts ./src/**/*.d.ts",
+    "js": "gulp js",
+    "pretest": "npm-run-all --parallel js lint",
+    "mocha": "mocha ./dist/**/*.js --compilers js:babel-core/register --require babel-polyfill",
+    "test": "nyc npm run mocha && nyc report --reporter=text-lcov > coverage.lcov && codecov --token=ef5af970-5e20-4047-8fdb-76960aeb8a0b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polutz/ptz-core-app.git"
+  },
+  "author": "angeloocana.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polutz/ptz-core-app/issues"
+  },
+  "homepage": "https://github.com/polutz/ptz-core-app#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "codecov": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-typescript": "^3.1.6",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^10.2.0",
+    "ptz-assert": "^1.6.2",
+    "sinon": "^2.1.0",
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.2",
+    "typings": "^2.1.0"
+  },
+  "dependencies": {
+    "ptz-core-domain": "^1.1.7"
+  }
+}
