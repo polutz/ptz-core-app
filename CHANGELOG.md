@@ -1,6 +1,11 @@
 ## master
 
 
+## 1.0.2 (April 7, 2017)
+
+* Add BaseApp.
+* Remove typings.
+
 ## 1.0.1 (April 6, 2017)
 
 * Fix BabelRepositoryFake implements interface IRepository<IEntityMinBase>.
