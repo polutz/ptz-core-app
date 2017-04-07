@@ -1,3 +1,4 @@
+import BaseApp from './BaseApp';
 import BaseRepositoryFake from './BaseRepositoryFake';
-export { BaseRepositoryFake };
+export { BaseApp, BaseRepositoryFake };
 //# sourceMappingURL=index.js.map
