@@ -1,7 +1,7 @@
 import { IBaseRepository, IEntityMinBase } from 'ptz-core-domain';
 
 // This is a fake repository to be used with subs/mocks
-export default class BaseRepositoryFake implements IBaseRepository {
+export default class BaseRepositoryFake implements IBaseRepository<IEntityMinBase> {
     db;
     collectionName: string;
     entities: IEntityMinBase[] = [];
