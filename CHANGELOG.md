@@ -1,6 +1,12 @@
 ## master
 
 
+## ... (, 2017)
+
+* Delete dist folder before compile js
+* Remove babel-node, babel-polyfill, babel-core and ptz-babel-register.
+* Remove babel settings from package.json.
+
 ## 1.0.2 (April 7, 2017)
 
 * Add BaseApp.
