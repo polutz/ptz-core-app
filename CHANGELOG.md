@@ -1,7 +1,7 @@
 ## master
 
 
-## ... (, 2017)
+## 1.0.3 (April 7, 2017)
 
 * Delete dist folder before compile js
 * Remove babel-node, babel-polyfill, babel-core and ptz-babel-register.
