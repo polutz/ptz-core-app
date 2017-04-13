@@ -1,5 +1,8 @@
 ## master
 
+## 1.0.5 (April 13, 2017)
+
+* Move IAppFuncArgs to ptz-core-domain.
 
 ## 1.0.4 (April 13, 2017)
 
