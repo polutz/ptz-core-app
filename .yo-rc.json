@@ -3,7 +3,8 @@
     "promptValues": {
       "appname": "ptz-core-app",
       "githubAuthor": "polutz",
-      "runNpmInstall": true
+      "runNpmInstall": true,
+      "codecovToken": ""
     }
   }
 }

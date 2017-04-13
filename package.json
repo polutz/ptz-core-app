@@ -41,6 +41,7 @@
     "@types/node": "^7.0.12"
   },
   "dependencies": {
+    "ptz-log": "^1.0.0",
     "ptz-core-domain": "^1.2.0"
   }
 }
