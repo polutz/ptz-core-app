@@ -1,6 +1,6 @@
 import { notOk, ok } from 'ptz-assert';
 import { spy } from 'sinon';
-import BaseApp from './BaseApp';
+import { BaseApp, IAppFuncArgs } from './index';
 
 describe('BaseApp', () => {
     describe('log', () => {
