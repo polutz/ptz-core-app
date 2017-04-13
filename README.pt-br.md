@@ -25,8 +25,7 @@ ptz-core-app é um módulo coração para todos os módulos App da Polutz.
 ```javascript
     import {
         BaseApp,
-        BaseRepositoryFake,
-        IAppFuncArgs
+        BaseRepositoryFake
     } from ptz-core-app;
 ```
 

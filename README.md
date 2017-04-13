@@ -25,8 +25,7 @@ ptz-core-app is the core for all App Polutz modules.
 ```javascript
     import {
         BaseApp,
-        BaseRepositoryFake,
-        IAppFuncArgs
+        BaseRepositoryFake
     } from ptz-core-app;
 ```
 
