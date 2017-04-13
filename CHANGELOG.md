@@ -1,9 +1,13 @@
 ## master
 
 
+## 1.0.4 (April 13, 2017)
+
+* Add IAppFuncArgs.
+
 ## 1.0.3 (April 7, 2017)
 
-* Delete dist folder before compile js
+* Delete dist folder before compile js.
 * Remove babel-node, babel-polyfill, babel-core and ptz-babel-register.
 * Remove babel settings from package.json.
 
