@@ -18,3 +18,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.BaseApp = _BaseApp2.default;
 exports.BaseRepositoryFake = _BaseRepositoryFake2.default;
 //# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.js.map

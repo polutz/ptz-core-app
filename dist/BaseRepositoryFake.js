@@ -8,6 +8,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// This is a fake repository to be used with subs/mocks
 var BaseRepositoryFake = function () {
     function BaseRepositoryFake(db, collectionName) {
         _classCallCheck(this, BaseRepositoryFake);
@@ -50,3 +51,4 @@ var BaseRepositoryFake = function () {
 
 
 exports.default = BaseRepositoryFake;
+//# sourceMappingURL=BaseRepositoryFake.js.map

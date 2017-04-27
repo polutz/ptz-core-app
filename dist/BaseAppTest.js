@@ -21,3 +21,4 @@ describe('BaseApp', function () {
     });
 });
 //# sourceMappingURL=BaseAppTest.js.map
+//# sourceMappingURL=BaseAppTest.js.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,WAAW,CAAC;AAChC,OAAO,kBAAkB,MAAM,sBAAsB,CAAC;AAEtD,OAAO,EACH,OAAO,EACP,kBAAkB,EACrB,CAAC"}
+{"version":3,"sources":["../dist-esnext/index.js"],"names":["BaseApp","BaseRepositoryFake"],"mappings":";;;;;;;AAAA;;;;AACA;;;;;;QACSA,O;QAASC,kB;AAClB","file":"index.js","sourcesContent":["import BaseApp from './BaseApp';\nimport BaseRepositoryFake from './BaseRepositoryFake';\nexport { BaseApp, BaseRepositoryFake };\n//# sourceMappingURL=index.js.map"]}

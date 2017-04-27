@@ -4,7 +4,7 @@
       "appname": "ptz-core-app",
       "githubAuthor": "polutz",
       "runNpmInstall": true,
-      "codecovToken": ""
+      "codecovToken": "ef5af970-5e20-4047-8fdb-76960aeb8a0b"
     }
   }
 }

@@ -1,7 +1,6 @@
 import { ok } from 'ptz-assert';
 import { spy } from 'sinon';
 import { BaseApp } from './index';
-
 describe('BaseApp', () => {
     describe('log', () => {
         it('log if console.log sent', () => {
@@ -10,10 +9,10 @@ describe('BaseApp', () => {
             baseApp.log('Hi!');
             ok(logSpy.called);
         });
-
         it('DO NOT log if console.log NOT sent', () => {
             const baseApp = new BaseApp({});
             baseApp.log('Hi!');
         });
     });
 });
+//# sourceMappingURL=BaseAppTest.js.map

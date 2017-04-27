@@ -28,3 +28,4 @@ var BaseApp = function () {
 
 
 exports.default = BaseApp;
+//# sourceMappingURL=BaseApp.js.map
