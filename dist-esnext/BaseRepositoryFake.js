@@ -6,9 +6,10 @@ export default class BaseRepositoryFake {
         this.collectionName = collectionName;
     }
     getDbCollection() {
-        return {};
+        return { collectionName: this.collectionName };
     }
     save(entity) {
+        this.entities.push(entity);
         return Promise.resolve(entity);
     }
     getById(id) {

@@ -12,10 +12,11 @@ export default class BaseRepositoryFake implements IBaseRepository<IEntityMinBas
     }
 
     getDbCollection() {
-        return {};
+        return { collectionName: this.collectionName };
     }
 
     save(entity: IEntityMinBase): Promise<IEntityMinBase> {
+        this.entities.push(entity);
         return Promise.resolve(entity);
     }
 

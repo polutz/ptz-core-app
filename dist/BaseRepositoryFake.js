@@ -21,11 +21,12 @@ var BaseRepositoryFake = function () {
     _createClass(BaseRepositoryFake, [{
         key: "getDbCollection",
         value: function getDbCollection() {
-            return {};
+            return { collectionName: this.collectionName };
         }
     }, {
         key: "save",
         value: function save(entity) {
+            this.entities.push(entity);
             return Promise.resolve(entity);
         }
     }, {
