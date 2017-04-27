@@ -1,5 +1,10 @@
 ## master
 
+
+## 1.0.6 (April 26, 2017)
+
+* Transpiling Typescript to esnext.
+
 ## 1.0.5 (April 13, 2017)
 
 * Move IAppFuncArgs to ptz-core-domain.

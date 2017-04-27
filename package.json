@@ -1,6 +1,6 @@
 {
   "name": "ptz-core-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This is the core App for polutz App modules.",
   "main": "dist/index.js",
   "typings": "src/index.ts",
