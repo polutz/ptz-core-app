@@ -2,13 +2,34 @@
 # yarn lockfile v1
 
 
+"@types/bson@*":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@types/bson/-/bson-1.0.3.tgz#6c26f0876bf9d8cbb06edd4019e29354bf3a03e0"
+  dependencies:
+    "@types/node" "*"
+
 "@types/mocha@^2.2.40":
   version "2.2.40"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.40.tgz#9811dd800ece544cd84b5b859917bf584a150c4c"
 
-"@types/node@^7.0.12":
+"@types/mongodb@^2.2.6":
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-2.2.6.tgz#cd7cb4c439219af1dfba5860d302eeaf2b0a13e4"
+  dependencies:
+    "@types/bson" "*"
+    "@types/node" "*"
+
+"@types/node@*", "@types/node@^7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.12.tgz#ae5f67a19c15f752148004db07cbbb372e69efc9"
+
+"@types/ramda@0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.0.10.tgz#b3627f8b8a2413ac51d768440f5e836943f9649e"
+
+"@types/shortid@0.0.29":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@types/shortid/-/shortid-0.0.29.tgz#8093ee0416a6e2bf2aa6338109114b3fbffa0e9b"
 
 abbrev@1, abbrev@1.0.x:
   version "1.0.9"
@@ -2147,18 +2168,47 @@ ptz-assert@^1.6.3:
   dependencies:
     assert "^1.4.1"
 
-ptz-core-domain@^1.2.0:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/ptz-core-domain/-/ptz-core-domain-1.3.3.tgz#9fcd1449d8a0217adf8d96c85852c5d34c0ce4b7"
+ptz-core-domain@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ptz-core-domain/-/ptz-core-domain-2.0.1.tgz#d041d5ba1fc5231a27806e1a4d972dbcb3c8798e"
   dependencies:
-    ptz-log "^1.0.0"
+    "@types/mongodb" "^2.2.6"
+    ptz-fp "^1.1.0"
+    ptz-log "^1.1.0"
+    ptz-validations "^2.0.0"
+    ramda "^0.24.0"
     shortid "^2.2.6"
+
+ptz-fp@^1.0.0, ptz-fp@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ptz-fp/-/ptz-fp-1.1.0.tgz#6f9af6c95e64c1d2f0596cd207320ad5a8bd3251"
+  dependencies:
+    "@types/ramda" "0.0.10"
+    ptz-log "^1.0.0"
+    ramda "^0.24.0"
 
 ptz-log@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ptz-log/-/ptz-log-1.0.1.tgz#8a91c18a4b34a70241ed9a0489b128c21c8ccc75"
   dependencies:
     moment "^2.18.1"
+
+ptz-log@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ptz-log/-/ptz-log-1.1.0.tgz#a5f81680da30e491e49c6a6022ec4972506d473b"
+  dependencies:
+    moment "^2.18.1"
+
+ptz-validations@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ptz-validations/-/ptz-validations-2.0.3.tgz#ecc91274991d20b0a1abd6d70517f03bf6e72f77"
+  dependencies:
+    "@types/ramda" "0.0.10"
+    "@types/shortid" "0.0.29"
+    ptz-fp "^1.0.0"
+    ptz-log "^1.0.0"
+    ramda "^0.24.1"
+    shortid "^2.2.8"
 
 punycode@^1.4.1:
   version "1.4.1"
@@ -2171,6 +2221,10 @@ qs@~6.3.0:
 qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
+
+ramda@^0.24.0, ramda@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.24.1.tgz#c3b7755197f35b8dc3502228262c4c91ddb6b857"
 
 randomatic@^1.1.3:
   version "1.1.6"
@@ -2423,7 +2477,7 @@ shell-quote@^1.6.1:
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
 
-shortid@^2.2.6:
+shortid@^2.2.6, shortid@^2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/shortid/-/shortid-2.2.8.tgz#033b117d6a2e975804f6f0969dbe7d3d0b355131"
 

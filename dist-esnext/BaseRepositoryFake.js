@@ -1,25 +1,34 @@
+import R from 'ramda';
 // This is a fake repository to be used with subs/mocks
-export default class BaseRepositoryFake {
-    constructor(db, collectionName) {
-        this.entities = [];
-        this.db = db;
-        this.collectionName = collectionName;
-    }
-    getDbCollection() {
-        return { collectionName: this.collectionName };
-    }
-    save(entity) {
-        this.entities.push(entity);
-        return Promise.resolve(entity);
-    }
-    getById(id) {
-        return Promise.resolve(this.entities[0]);
-    }
-    getByIds(ids) {
-        return Promise.resolve(this.entities);
-    }
-    find(query, options) {
-        return Promise.resolve(this.entities);
-    }
+export let entities = [];
+const fakeDbCollection = { collectionName: 'collectionName' };
+export const createRepository = R.curry((collectionName, url) => {
+    entities = [];
+    const db = url;
+    fakeDbCollection.collectionName = collectionName;
+    return {
+        db,
+        collectionName,
+        getDbCollection,
+        save,
+        getById,
+        getByIds,
+        find,
+    };
+});
+export const getDbCollection = () => fakeDbCollection;
+export function save(entity) {
+    entities.push(entity);
+    return Promise.resolve(entity);
 }
+export function getById(id) {
+    return Promise.resolve(entities[0]);
+}
+export function getByIds(ids) {
+    return Promise.resolve(entities);
+}
+export function find(query, options) {
+    return Promise.resolve(entities);
+}
+// }
 //# sourceMappingURL=BaseRepositoryFake.js.map

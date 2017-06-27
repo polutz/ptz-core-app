@@ -1,55 +1,53 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.getDbCollection = exports.createRepository = exports.entities = undefined;
+exports.save = save;
+exports.getById = getById;
+exports.getByIds = getByIds;
+exports.find = find;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _ramda = require('ramda');
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _ramda2 = _interopRequireDefault(_ramda);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // This is a fake repository to be used with subs/mocks
-var BaseRepositoryFake = function () {
-    function BaseRepositoryFake(db, collectionName) {
-        _classCallCheck(this, BaseRepositoryFake);
-
-        this.entities = [];
-        this.db = db;
-        this.collectionName = collectionName;
-    }
-
-    _createClass(BaseRepositoryFake, [{
-        key: "getDbCollection",
-        value: function getDbCollection() {
-            return { collectionName: this.collectionName };
-        }
-    }, {
-        key: "save",
-        value: function save(entity) {
-            this.entities.push(entity);
-            return Promise.resolve(entity);
-        }
-    }, {
-        key: "getById",
-        value: function getById(id) {
-            return Promise.resolve(this.entities[0]);
-        }
-    }, {
-        key: "getByIds",
-        value: function getByIds(ids) {
-            return Promise.resolve(this.entities);
-        }
-    }, {
-        key: "find",
-        value: function find(query, options) {
-            return Promise.resolve(this.entities);
-        }
-    }]);
-
-    return BaseRepositoryFake;
-}();
+var entities = exports.entities = [];
+var fakeDbCollection = { collectionName: 'collectionName' };
+var createRepository = exports.createRepository = _ramda2.default.curry(function (collectionName, url) {
+    exports.entities = entities = [];
+    var db = url;
+    fakeDbCollection.collectionName = collectionName;
+    return {
+        db: db,
+        collectionName: collectionName,
+        getDbCollection: getDbCollection,
+        save: save,
+        getById: getById,
+        getByIds: getByIds,
+        find: find
+    };
+});
+var getDbCollection = exports.getDbCollection = function getDbCollection() {
+    return fakeDbCollection;
+};
+function save(entity) {
+    entities.push(entity);
+    return Promise.resolve(entity);
+}
+function getById(id) {
+    return Promise.resolve(entities[0]);
+}
+function getByIds(ids) {
+    return Promise.resolve(entities);
+}
+function find(query, options) {
+    return Promise.resolve(entities);
+}
+// }
 //# sourceMappingURL=BaseRepositoryFake.js.map
-
-
-exports.default = BaseRepositoryFake;
 //# sourceMappingURL=BaseRepositoryFake.js.map

@@ -4,13 +4,17 @@ var _ptzAssert = require('ptz-assert');
 
 var _index = require('./index');
 
+var Core = _interopRequireWildcard(_index);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 describe('ptz-core-app', function () {
     describe('exports', function () {
-        it('BaseApp', function () {
-            return (0, _ptzAssert.ok)(_index.BaseApp);
+        it('createBaseApp', function () {
+            return (0, _ptzAssert.ok)(Core.createBaseApp);
         });
-        it('BaseRepositoryFake', function () {
-            return (0, _ptzAssert.ok)(_index.BaseRepositoryFake);
+        it('createFakeRepository', function () {
+            return (0, _ptzAssert.ok)(Core.createRepository);
         });
     });
 });

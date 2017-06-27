@@ -1,9 +1,9 @@
 import { ok } from 'ptz-assert';
-import { BaseApp, BaseRepositoryFake } from './index';
+import * as Core from './index';
 
 describe('ptz-core-app', () => {
     describe('exports', () => {
-        it('BaseApp', () => ok(BaseApp));
-        it('BaseRepositoryFake', () => ok(BaseRepositoryFake));
+        it('createBaseApp', () => ok(Core.createBaseApp));
+        it('createFakeRepository', () => ok(Core.createRepository));
     });
 });
