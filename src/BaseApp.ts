@@ -1,4 +1,4 @@
-import { IBaseApp, IBaseAppArgs } from 'ptz-core-domain';
+import { IBaseApp, IBaseAppArgs } from '@alanmarcell/ptz-core-domain';
 
 export const createBaseApp = (baseAppArgs: IBaseAppArgs): IBaseApp => {
     const logFunc = baseAppArgs.log;

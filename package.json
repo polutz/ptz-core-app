@@ -1,6 +1,6 @@
 {
-  "name": "ptz-core-app",
-  "version": "1.0.6",
+  "name": "@alanmarcell/ptz-core-app",
+  "version": "0.0.0",
   "description": "This is the core App for polutz App modules.",
   "main": "dist/index.js",
   "typings": "src/index.ts",
@@ -37,15 +37,15 @@
     "npm-run-all": "^4.0.2",
     "nyc": "^11.0.2",
     "opn-cli": "^3.1.0",
-    "ptz-assert": "^1.6.3",
+    "ptz-assert": "^1.6.8",
     "rimraf": "^2.6.1",
-    "sinon": "^2.1.0",
-    "tslint": "^5.0.0",
-    "typescript": "^2.2.2"
+    "sinon": "^2.3.5",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4"
   },
   "dependencies": {
-    "ptz-core-domain": "^2.0.1",
-    "ptz-log": "^1.0.0"
+    "@alanmarcell/ptz-core-domain": "^0.0.1",
+    "ptz-log": "^1.1.0"
   },
   "scriptsBK": {
     "lint": "tslint ./src/**/*.ts ./src/**/*.test.ts ./src/**/*.d.ts",
