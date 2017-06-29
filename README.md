@@ -1,5 +1,6 @@
 # ptz-core-app
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b3f2dabb5ceb491398a37406d4268894)](https://www.codacy.com/app/polutz/ptz-core-app?utm_source=github.com&utm_medium=referral&utm_content=polutz/ptz-core-app&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/polutz/ptz-core-app.svg)](https://travis-ci.org/polutz/ptz-core-app)
 [![NPM](https://img.shields.io/npm/v/ptz-core-app.svg)](https://www.npmjs.com/package/ptz-core-app)
 [![codecov.io](http://codecov.io/github/polutz/ptz-core-app/coverage.svg)](http://codecov.io/github/polutz/ptz-core-app)
