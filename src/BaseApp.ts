@@ -1,15 +1,11 @@
-import { IBaseApp, IBaseAppArgs } from 'ptz-core-domain';
+import { IBaseApp, IBaseAppArgs } from '@alanmarcell/ptz-core-domain';
 
-export default class BaseApp implements IBaseApp {
-
-    private logFunc;
-
-    constructor(baseAppArgs: IBaseAppArgs) {
-        this.logFunc = baseAppArgs.log;
-    }
-
-    log(...args: any[]): void {
-        if (this.logFunc)
-            this.logFunc(...args);
-    }
-}
+export const createBaseApp = (baseAppArgs: IBaseAppArgs): IBaseApp => {
+    const logFunc = baseAppArgs.log;
+    return {
+        log: (...args: any[]): void => {
+            if (logFunc)
+                logFunc(...args);
+        }
+    };
+};

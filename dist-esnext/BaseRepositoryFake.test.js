@@ -1,49 +1,63 @@
 import { equal } from 'ptz-assert';
-import { EntityMinBase } from 'ptz-core-domain';
-import { BaseRepositoryFake } from './index';
+import * as BaseRepositoryFake from './index';
+const collectionName = 'test';
+const db = 'fakeDb';
+let repository;
 describe('BaseRepositoryFake', () => {
+    beforeEach('', () => {
+        repository = BaseRepositoryFake.createRepository(collectionName, db);
+    });
     it('set collectionName and db', () => {
-        const collectionName = 'test';
-        const db = {};
-        const repository = new BaseRepositoryFake(db, collectionName);
         equal(repository.collectionName, collectionName, 'wrong collectionsName');
         equal(repository.db, db, 'wrong db');
     });
     it('save', () => {
-        const repository = new BaseRepositoryFake(null, null);
-        const entity = new EntityMinBase({});
+        const entity = {
+            name: 'entity'
+        };
         repository.save(entity);
-        equal(repository.entities[0], entity);
+        equal(BaseRepositoryFake.entities[0], entity);
     });
     it('getById', async () => {
-        const repository = new BaseRepositoryFake(null, null);
-        const entity = new EntityMinBase({});
+        const entity = {
+            id: 'testid',
+            name: 'entity'
+        };
         repository.save(entity);
         const dbEntity = await repository.getById(entity.id);
         equal(dbEntity, entity);
     });
     it('getByIds', async () => {
-        const repository = new BaseRepositoryFake(null, null);
-        const entity1 = new EntityMinBase({});
+        const entity1 = {
+            id: 'testid',
+            name: 'entity1'
+        };
         repository.save(entity1);
-        const entity2 = new EntityMinBase({});
+        const entity2 = {
+            id: 'testid1',
+            name: 'entity2'
+        };
         repository.save(entity2);
         const dbEntities = await repository.getByIds([entity1.id, entity2.id]);
         equal(dbEntities.length, 2);
     });
     it('find', async () => {
-        const repository = new BaseRepositoryFake(null, null);
-        const entity1 = new EntityMinBase({});
+        const entity1 = {
+            id: 'testid',
+            name: 'entity1'
+        };
         repository.save(entity1);
-        const entity2 = new EntityMinBase({});
+        const entity2 = {
+            id: 'testid1',
+            name: 'entity2'
+        };
         repository.save(entity2);
         const dbEntities = await repository.find({}, { limit: 2 });
         equal(dbEntities.length, 2);
     });
     it('getDbCollection', () => {
-        const repository = new BaseRepositoryFake(null, 'test');
-        const dbCollection = repository.getDbCollection();
-        equal(dbCollection.collectionName, 'test');
+        const dbCollectionName = BaseRepositoryFake.getDbCollection();
+        equal(dbCollectionName.collectionName, collectionName);
     });
 });
 //# sourceMappingURL=BaseRepositoryFake.test.js.map
