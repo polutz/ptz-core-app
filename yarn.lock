@@ -2,26 +2,6 @@
 # yarn lockfile v1
 
 
-"@alanmarcell/ptz-core-domain@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@alanmarcell/ptz-core-domain/-/ptz-core-domain-0.0.1.tgz#41d93601653061f6426ee8b9e035fc30d25ad0cc"
-  dependencies:
-    "@alanmarcell/ptz-validations" "0.0.0"
-    "@types/mongodb" "^2.2.6"
-    ptz-fp "^1.1.0"
-    ptz-log "^1.1.0"
-    ramda "^0.24.0"
-    shortid "^2.2.6"
-
-"@alanmarcell/ptz-validations@0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@alanmarcell/ptz-validations/-/ptz-validations-0.0.0.tgz#378a9d87317ca86115557d3a73cfcff8cd0cd9f4"
-  dependencies:
-    ptz-fp "^1.0.1"
-    ptz-log "^1.1.0"
-    ramda "^0.24.1"
-    shortid "^2.2.8"
-
 "@types/bson@*":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@types/bson/-/bson-1.0.3.tgz#6c26f0876bf9d8cbb06edd4019e29354bf3a03e0"
@@ -33,19 +13,27 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.40.tgz#9811dd800ece544cd84b5b859917bf584a150c4c"
 
 "@types/mongodb@^2.2.6":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-2.2.6.tgz#cd7cb4c439219af1dfba5860d302eeaf2b0a13e4"
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-2.2.7.tgz#35c04cb60ff06d0c6ab71cc6561e41baf094fa70"
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^7.0.12":
+"@types/node@*", "@types/node@^8.0.6":
+  version "8.0.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.7.tgz#fb0ad04b5b6f6eabe0372a32a8f1fbba5c130cae"
+
+"@types/node@^7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.12.tgz#ae5f67a19c15f752148004db07cbbb372e69efc9"
 
 "@types/ramda@0.0.10":
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.0.10.tgz#b3627f8b8a2413ac51d768440f5e836943f9649e"
+
+"@types/shortid@0.0.28":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@types/shortid/-/shortid-0.0.28.tgz#b359e25348351f6bf736eed20d2e666528c248c6"
 
 abbrev@1, abbrev@1.0.x:
   version "1.0.9"
@@ -1892,17 +1880,17 @@ mimic-fn@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.1.0.tgz#e667783d92e89dbd342818b5230b9d62a672ad18"
 
-"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
-  dependencies:
-    brace-expansion "^1.0.0"
-
-minimatch@^3.0.4:
+"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   dependencies:
     brace-expansion "^1.1.7"
+
+minimatch@^3.0.2:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
+  dependencies:
+    brace-expansion "^1.0.0"
 
 minimist@0.0.8, minimist@~0.0.1:
   version "0.0.8"
@@ -2288,6 +2276,20 @@ ptz-assert@^1.6.8:
     assert "^1.4.1"
     ptz-log "^1.0.0"
 
+ptz-core-domain@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/ptz-core-domain/-/ptz-core-domain-2.0.4.tgz#e97497277e009aa3573b3054af3657c3d0b21d08"
+  dependencies:
+    "@types/mongodb" "^2.2.6"
+    "@types/node" "^8.0.6"
+    "@types/ramda" "0.0.10"
+    "@types/shortid" "0.0.28"
+    ptz-fp "^1.1.0"
+    ptz-log "^1.1.0"
+    ptz-validations "3.0.1"
+    ramda "^0.24.0"
+    shortid "^2.2.6"
+
 ptz-fp@^1.0.1, ptz-fp@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ptz-fp/-/ptz-fp-1.1.0.tgz#6f9af6c95e64c1d2f0596cd207320ad5a8bd3251"
@@ -2301,6 +2303,15 @@ ptz-log@^1.0.0, ptz-log@^1.1.0:
   resolved "https://registry.yarnpkg.com/ptz-log/-/ptz-log-1.1.0.tgz#a5f81680da30e491e49c6a6022ec4972506d473b"
   dependencies:
     moment "^2.18.1"
+
+ptz-validations@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/ptz-validations/-/ptz-validations-3.0.1.tgz#2dde5ee3669b41baf3704fc952d1d7fb5b427218"
+  dependencies:
+    ptz-fp "^1.0.1"
+    ptz-log "^1.1.0"
+    ramda "^0.24.1"
+    shortid "^2.2.8"
 
 punycode@^1.4.1:
   version "1.4.1"

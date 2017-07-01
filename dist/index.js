@@ -15,16 +15,4 @@ Object.keys(_BaseRepositoryFake).forEach(function (key) {
     }
   });
 });
-
-var _BaseApp = require('./BaseApp');
-
-Object.keys(_BaseApp).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _BaseApp[key];
-    }
-  });
-});
 //# sourceMappingURL=index.js.map

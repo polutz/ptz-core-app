@@ -1,4 +1,4 @@
-import { IEntityMinBase } from '@alanmarcell/ptz-core-domain';
+import { IEntityMinBase } from 'ptz-core-domain';
 import R from 'ramda';
 // This is a fake repository to be used with subs/mocks
 export let entities: IEntityMinBase[] = [];

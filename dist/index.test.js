@@ -10,9 +10,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 describe('ptz-core-app', function () {
     describe('exports', function () {
-        it('createBaseApp', function () {
-            return (0, _ptzAssert.ok)(Core.createBaseApp);
-        });
         it('createFakeRepository', function () {
             return (0, _ptzAssert.ok)(Core.createRepository);
         });

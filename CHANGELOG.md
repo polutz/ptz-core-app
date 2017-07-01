@@ -1,8 +1,9 @@
 ## master
 
-## 2.0.0 (June 27, 2017) 
+## 2.0.0 (July 1, 2017) 
 
 * Complete rewrite to functional programming.
+* Remove BaseApp.
 
 ## 1.0.6 (April 26, 2017)
 
