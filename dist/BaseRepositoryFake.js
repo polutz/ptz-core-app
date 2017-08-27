@@ -16,25 +16,23 @@ var _ramda2 = _interopRequireDefault(_ramda);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // This is a fake repository to be used with subs/mocks
-var entities = exports.entities = [];
-var fakeDbCollection = { collectionName: 'collectionName' };
-var createRepository = exports.createRepository = _ramda2.default.curry(function (collectionName, url) {
+let entities = exports.entities = [];
+const fakeDbCollection = { collectionName: 'collectionName' };
+const createRepository = exports.createRepository = _ramda2.default.curry((collectionName, url) => {
     exports.entities = entities = [];
-    var db = url;
+    const db = url;
     fakeDbCollection.collectionName = collectionName;
     return {
-        db: db,
-        collectionName: collectionName,
-        getDbCollection: getDbCollection,
-        save: save,
-        getById: getById,
-        getByIds: getByIds,
-        find: find
+        db,
+        collectionName,
+        getDbCollection,
+        save,
+        getById,
+        getByIds,
+        find
     };
 });
-var getDbCollection = exports.getDbCollection = function getDbCollection() {
-    return fakeDbCollection;
-};
+const getDbCollection = exports.getDbCollection = () => fakeDbCollection;
 function save(entity) {
     entities.push(entity);
     return Promise.resolve(entity);
